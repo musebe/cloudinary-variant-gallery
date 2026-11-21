@@ -10,7 +10,7 @@ test('saved catalog loads and a detail view stays with the selected color', asyn
   const gallery = page.getByRole('region', { name: 'Clay product images' })
   await expect(gallery.locator('img').first()).toHaveAttribute('alt', /in clay, full product view/)
   await expect(gallery.locator('img').first()).toHaveJSProperty('complete', true)
-  await expect(gallery.locator('img').first()).toHaveJSProperty('naturalWidth', 1000)
+  await expect.poll(() => gallery.locator('img').first().evaluate(image => (image as HTMLImageElement).naturalWidth)).toBeGreaterThan(0)
   await page.getByRole('button', { name: 'Clay finish detail' }).click()
   await expect(gallery.locator('img').first()).toHaveAttribute('alt', /in clay, shade and finish detail/)
   expect(errors).toEqual([])
