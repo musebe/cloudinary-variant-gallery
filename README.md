@@ -2,6 +2,8 @@
 
 A focused Nuxt storefront that keeps a product's selected color and SKU matched to its Cloudinary images. Missing or ambiguous media produces an unavailable state, never a photo from another color.
 
+[Try the live demo](https://cloudinary-variant-gallery.vercel.app/) · [Source code](https://github.com/musebe/cloudinary-variant-gallery)
+
 ## Run locally
 
 Use Node.js 24 and pnpm 10.
