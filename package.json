@@ -1,0 +1,44 @@
+{
+  "name": "cloudinary-variant-gallery",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.34.5",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "dev": "nuxt dev --dotenv .env.local --host 127.0.0.1 --port 3006",
+    "build": "nuxt build",
+    "preview": "nuxt preview --port 3006",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "demo:seed": "node --env-file=.env.local --import tsx scripts/seed-demo.ts",
+    "demo:refresh": "node --env-file=.env.local --import tsx scripts/refresh-demo.ts",
+    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build"
+  },
+  "dependencies": {
+    "@nuxtjs/cloudinary": "4.1.0",
+    "cloudinary": "2.11.0",
+    "nuxt": "4.6.4",
+    "vue": "3.5.46",
+    "vue-router": "5.5.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "1.17.0",
+    "@playwright/test": "1.65.1",
+    "@tailwindcss/vite": "4.3.5",
+    "@types/node": "^24.19.2",
+    "eslint": "10.15.0",
+    "prettier": "3.10.1",
+    "sharp": "0.35.5",
+    "tailwindcss": "4.3.5",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vitest": "5.1.1",
+    "vue-tsc": "3.3.14"
+  }
+}
