@@ -11,13 +11,15 @@ pnpm install
 pnpm dev
 ```
 
-Open http://localhost:3006. The saved catalog will work without API credentials once provisioned. It uses synthetic product illustrations, not customer photographs.
+Open http://localhost:3006. The included catalog works without API credentials. It uses six synthetic product illustrations stored in Cloudinary, not customer photographs.
+
+Select Forest, Clay, or Cream to switch between two matching views. Select Midnight to test missing media. The gallery clears the previous color instead of showing a fallback.
 
 ## Cloudinary setup
 
-Copy `.env.example` to `.env.local` and fill the server-only credentials. Then run `pnpm demo:seed` once to create the dedicated demo assets and metadata. `pnpm demo:refresh` reads and validates them again after metadata changes.
+To use your own Cloudinary environment, copy `.env.example` to `.env.local` and fill the server-only credentials. Run `pnpm demo:seed` once to create six demo assets and their typed metadata fields. Existing assets are never overwritten. `pnpm demo:refresh` reads and validates them again after metadata changes.
 
-These local commands use standard Cloudinary account quota. The public application cannot modify the catalog or access management credentials. A saved catalog represents the last successful readback, not current approval state.
+These local commands use standard Cloudinary account quota; no AI add-on is needed. The public application cannot modify the catalog or access management credentials. A saved catalog represents a dated readback, not current approval state. Refresh the manifest and redeploy to publish metadata changes. A failed mapping becomes unavailable.
 
 ## Checks
 
@@ -26,4 +28,6 @@ pnpm check
 pnpm test:e2e
 ```
 
-The implementation and tests are in progress. Verified results will be recorded as each checkpoint is completed.
+The checks include 43 mapping tests and eight browser checks across desktop and mobile layouts. They cover ambiguous mappings, approval state, missing heroes, duplicate ordering, rapid switching, and unavailable media.
+
+Cloudinary provides typed asset metadata and responsive delivery through Nuxt Cloudinary. The application validates associations against its catalog. Metadata cannot establish that the pixels depict the correct product; a wrongly labeled image still needs human correction.
