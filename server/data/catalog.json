@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "source": "cloudinary-admin-readback",
+  "cloudName": "demo-article-projects",
+  "capturedAt": "2026-11-21T16:24:56.887Z",
+  "productId": "arc-lamp",
+  "variants": [
+    {
+      "variant": {
+        "id": "arc-forest",
+        "sku": "ARC-FOREST",
+        "label": "Forest",
+        "color": "forest",
+        "hex": "#344e45"
+      },
+      "status": "ready",
+      "images": [
+        {
+          "assetId": "425ad88393f259aaeb5369d852de6d23",
+          "publicId": "variant-gallery/v1/arc-forest-hero",
+          "version": 1795278287,
+          "width": 1200,
+          "height": 1200,
+          "format": "png",
+          "role": "hero",
+          "order": 0,
+          "alt": "Arc task lamp in forest, full product view"
+        },
+        {
+          "assetId": "84fd638d547485aaa8ae03ee0920ad67",
+          "publicId": "variant-gallery/v1/arc-forest-detail",
+          "version": 1795278288,
+          "width": 1200,
+          "height": 1200,
+          "format": "png",
+          "role": "detail",
+          "order": 1,
+          "alt": "Arc task lamp in forest, shade and finish detail"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "variant": {
+        "id": "arc-clay",
+        "sku": "ARC-CLAY",
+        "label": "Clay",
+        "color": "clay",
+        "hex": "#bd7157"
+      },
+      "status": "ready",
+      "images": [
+        {
+          "assetId": "530d5d7256b11dc69d11c69aa0a28c4a",
+          "publicId": "variant-gallery/v1/arc-clay-hero",
+          "version": 1795278290,
+          "width": 1200,
+          "height": 1200,
+          "format": "png",
+          "role": "hero",
+          "order": 0,
+          "alt": "Arc task lamp in clay, full product view"
+        },
+        {
+          "assetId": "a39c6442cc842eee70b070e8da252ff6",
+          "publicId": "variant-gallery/v1/arc-clay-detail",
+          "version": 1795278291,
+          "width": 1200,
+          "height": 1200,
+          "format": "png",
+          "role": "detail",
+          "order": 1,
+          "alt": "Arc task lamp in clay, shade and finish detail"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "variant": {
+        "id": "arc-cream",
+        "sku": "ARC-CREAM",
+        "label": "Cream",
+        "color": "cream",
+        "hex": "#d8c9ad"
+      },
+      "status": "ready",
+      "images": [
+        {
+          "assetId": "6b6eb03de590480fbb30110f4f1b17ac",
+          "publicId": "variant-gallery/v1/arc-cream-hero",
+          "version": 1795278292,
+          "width": 1200,
+          "height": 1200,
+          "format": "png",
+          "role": "hero",
+          "order": 0,
+          "alt": "Arc task lamp in cream, full product view"
+        },
+        {
+          "assetId": "0aef47132e56f0c879680d7f6da4f4e5",
+          "publicId": "variant-gallery/v1/arc-cream-detail",
+          "version": 1795278293,
+          "width": 1200,
+          "height": 1200,
+          "format": "png",
+          "role": "detail",
+          "order": 1,
+          "alt": "Arc task lamp in cream, shade and finish detail"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "variant": {
+        "id": "arc-midnight",
+        "sku": "ARC-MIDNIGHT",
+        "label": "Midnight",
+        "color": "midnight",
+        "hex": "#303949"
+      },
+      "status": "unavailable",
+      "images": [],
+      "issues": [
+        "no_approved_images"
+      ]
+    }
+  ]
+}

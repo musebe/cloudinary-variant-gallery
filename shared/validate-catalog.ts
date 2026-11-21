@@ -28,7 +28,9 @@ export function validateCatalog(assets: readonly AssetEvidence[], cloudName: str
         || !asset.asset_id || !Number.isSafeInteger(asset.version) || asset.version < 1
         || !Number.isSafeInteger(asset.width) || !Number.isSafeInteger(asset.height)
         || asset.width < 1 || asset.height < 1) issues.add('invalid_media')
-      if (ids.has(asset.asset_id) || images.some(image => image.publicId === asset.public_id)) issues.add('duplicate_asset')
+      if (ids.has(asset.asset_id) || images.some(image => image.publicId === asset.public_id)
+        || assets.filter(item => item.asset_id === asset.asset_id).length > 1
+        || assets.filter(item => item.public_id === asset.public_id).length > 1) issues.add('duplicate_asset')
       ids.add(asset.asset_id)
       const order = m[field.order]
       const role = m[field.role]
