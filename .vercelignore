@@ -1,0 +1,11 @@
+docs/
+.env*
+.private/
+.git/
+.nuxt/
+.output/
+.vercel/
+node_modules/
+test-results/
+playwright-report/
+coverage/
